@@ -1,0 +1,28 @@
+Redshift Architecture
+
+Amazon Redshift follows a distributed, shared-nothing architecture 
+consisting of a leader node and multiple compute nodes. The leader 
+node handles query parsing, planning, and coordination, while compute 
+nodes execute queries in parallel on distributed data. This parallel 
+processing enables high performance for large-scale data analytics.
+
+---------------------------------------------------------------------------
+
+Columnar Storage
+
+Redshift stores data in a columnar format instead of row-based storage. 
+Each column is stored separately, allowing queries to read only the 
+required columns rather than the entire row. This reduces I/O, improves 
+compression, and significantly speeds up analytical queries.
+
+---------------------------------------------------------------------------
+
+DISTKEY and SORTKEY Usage
+
+DISTKEY determines how data is distributed across nodes. Choosing a good 
+DISTKEY (commonly a join column) ensures even data distribution and minimizes 
+data movement during joins.
+
+SORTKEY defines the order in which data is stored on disk. It improves 
+query performance by enabling faster data retrieval, especially for 
+range-based queries and filtering conditions.
