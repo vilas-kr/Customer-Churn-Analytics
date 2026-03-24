@@ -1,0 +1,8 @@
+(.venv) PS D:\Bridgelabs\AWS\customer-churn-analytics> python -m scripts.upload_to_s3
+INFO:botocore.credentials:Found credentials in shared credentials file: ~/.aws/credentials
+INFO:root:Upload successful: s3://telecom-redshift/raw/telecom_customer_churn.csv
+INFO:root:Upload successful: s3://telecom-redshift/raw/telecom_zipcode_population.csv
+INFO:root:Files in bucket 'telecom-redshift':
+INFO:root: - raw/
+INFO:root: - raw/telecom_customer_churn.csv
+INFO:root: - raw/telecom_zipcode_population.csv
